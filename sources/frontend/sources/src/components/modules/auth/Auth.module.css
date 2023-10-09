@@ -1,0 +1,111 @@
+#content {
+	display: flex;
+}
+
+#content::before {
+	content: "";
+	background: url("~/public/separator_light.svg") no-repeat;
+	width: 100%;
+	position: absolute;
+	height: 100px;
+}
+
+#authWallpaper {
+	background: url("~/public/authWallpaper.jpg") no-repeat;
+	width: 60vw;
+	height: calc(100vh - 90px);
+}
+
+#loginArea {
+	width: 40vw;
+	position: absolute;
+	height: calc(100vh - 90px);
+	position: relative;
+}
+
+#loginAreaContent {
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: fit-content;
+	display: flex;
+	flex-direction: column;
+	gap: 28px;
+}
+
+#loginAreaContent form,
+#socialButtons {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+#socialButtonsSm {
+	display: flex;
+	gap: 12px;
+	justify-content: center;
+}
+
+#loginAreaContent form input {
+	width: calc(400px - 24px - 2px);
+}
+#loginAreaContent [class~="password-input"] {
+	width: 100%
+}
+
+#changeLink {
+	text-align: center;
+}
+
+#changeLink b {
+	color: var(--primary);
+}
+
+#title>* {
+	margin: 10px 0px;
+}
+
+#title p {
+	color: var(--text-detail);
+}
+
+#orSeparator {
+	position: relative;
+}
+
+#orSeparator hr {
+	width: 100%;
+	border: 1px solid var(--border);
+}
+
+#orSeparator span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--background);
+	padding: 0px 10px;
+	color: var(--text-detail);
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.customButton {
+	transition: unset !important;
+	transition-duration: 0.3s !important;
+}
+
+.customButton:hover {
+	transform: scale(1.05);
+	background-color: var(--primary) !important;
+}
+
+.alert {
+	background-color: rgb(255 27 27 / 15%) !important;
+	color: var(--text) !important;
+	/* Maybe add slide in animation */
+}
+.alert[data-severity="info"] {
+	background-color: rgb(0 131 255 / 15%) !important
+}

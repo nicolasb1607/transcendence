@@ -1,0 +1,114 @@
+html {
+	font-family: 'Lato', 'Arial', 'sans-serif';
+	font-size: 1em;
+	color: var(--text);
+	background: var(--background);
+}
+
+body {
+	margin: 0px;
+	width: 100%;
+	overflow-x: hidden;
+	font-size: 18px;
+}
+
+ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+}
+button {
+	border: none;
+	cursor: pointer;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+	transition-duration: 0.3s;
+}
+
+a:hover {
+	color: var(--primary);
+}
+
+a.MuiButtonBase-root:hover {
+	color: white;
+}
+
+h1 {
+	font-size: 48px;
+}
+
+h2 {
+	font-size: 28px;
+}
+
+h3 {
+	font-size: 20px;
+}
+
+h4 {
+	font-size: 19px;
+}
+p, a, h1, h2, h3, h4, h5, h6 {
+	color: var(--text);
+}
+/** Disable Chrome autofill background color **/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #ffffff;
+    transition: background-color 5000s ease-in-out 0s;
+    box-shadow: inset 0 0 20px 20px #23232329;
+}
+
+#game-scene {
+	width: 100%;
+	height: 100%;
+}
+#content {
+	margin-left: 260px;
+	position: relative;
+	min-height: calc(100vh - 40px);
+	margin: 0px 100px 0px calc(100px + 260px);
+	/* page width - tchat w - margin */
+	width: calc(100% - 433px - 200px - 260px);
+	padding-top: 40px;
+}
+.fullWidth #content {
+	/* page width - tchat w - margin */
+	width: calc(100% - 260px - (40px * 4));
+}
+[class~="MuiTooltip-tooltip"] {
+	background: var(--background)!important;
+	font-weight:600!important;
+}
+[datatype="light"] [class~="MuiTooltip-tooltip"] {
+	background: var(--background-light)!important;
+    font-size: 12px;
+    padding: 8px;
+}
+[class~="MuiTooltip-tooltip"] span {
+    color: var(--background);
+}
+[datatype="light"] [class~="MuiTooltip-tooltip"] span {
+	color: var(--background-light);
+}
+.MuiDialog-paper {
+    background-image: unset!important;
+}
+@media (min-width:959px) and (max-width:2000px){
+	body {
+		font-size: 1em;
+	}
+	#content {
+		width: calc(100% - 390px - 80px - 260px);
+		margin: 0px 40px 0px calc(40px + 260px);
+	}
+	.fullWidth #content {
+		/* page width - tchat w - margin */
+		width: calc(100% - 260px - (40px * 2));
+	}
+}

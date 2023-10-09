@@ -1,0 +1,153 @@
+generator client {
+	provider = "prisma-client-js"
+	previewFeatures = ["extendedWhereUnique","fullTextSearch"]
+}
+
+datasource db {
+	provider = "postgresql"
+	url      = env("DATABASE_URL")
+}
+
+enum UserRole {
+	admin @map("admin")
+	moderator @map("moderator")
+	user @map("user")
+}
+
+enum UserRelationStatus {
+	friend @map("friend")
+	blocked @map("blocked")
+	requesting @map("requesting")
+}
+
+enum UserChannelRole {
+	admin @map("admin")
+	user @map("user")
+}
+
+enum UserStatus {
+	offline
+	online
+	away
+	inGame
+}
+
+enum GameType {
+	classicPong
+	spatialPong
+}
+
+model User {
+	ID				Int			@id @default(autoincrement())
+	login			String		@unique
+	password		String
+	email			String		@unique
+	role			UserRole	@default(user)
+	status			UserStatus	@default(offline)
+	isTwoFAEnabled	Boolean		@default(false)
+	TwoFASecret		String		@default("")
+}
+
+/// Information about the user with key-value pairs, such as ['avatar', 'path_to_avatar-img'], ['rank', 'admin']
+///@see /sources/database/mockData.sql for more information about UserMeta
+model UserMeta {
+	ID			Int			@id @default(autoincrement())
+	userId		Int			@map("user_id")
+	metaKey		String		@map("meta_key")
+	metaValue	String		@map("meta_value")
+
+	@@unique([userId, metaKey])
+}
+
+model UserOauth {
+	ID				Int			@id @default(autoincrement())
+	userId			Int			@map("user_id")
+	provider		String
+	accessToken		String		@map("access_token")
+	refreshToken 	String?		@map("refresh_token")
+	expiryDate		DateTime	@map("expiry_date")
+}
+
+/// Information about the message being sent
+model Message {
+	ID			Int			@id @default(autoincrement())
+	emitterId	Int			@map("emitter_id")
+	content		String		@default("")
+	channelId	Int			@map("channel_id")
+	createdAt	DateTime	@default(now()) @map("created_at") @db.Timestamp(6)
+}
+
+/// Information about user groups (channels)
+model Channel {
+	ID			Int			@id @default(autoincrement())
+	name		String
+	type		String		@default("general")
+	ownerId		Int			@map("owner_id")
+	createdAt	DateTime	@default(now()) @map("created_at") @db.Timestamp(6)
+	password	String?
+	image		String		@default("blue_lizards.jpg")
+}
+
+/// Relationship between users and channels
+model UserChannel {
+	ID			Int			@id @default(autoincrement())
+	///Id of the user
+	userId		Int			@map("user_id")
+	///Id of the channel
+	channelId	Int			@map("channel_id")
+	///Date of the user join the channel
+	createdAt	DateTime	@default(now()) @map("created_at") @db.Timestamp(6)
+	isConfirmed	Boolean		@map("is_confirmed") @default(false)
+	isBan		Boolean		@default(false) @map("is_ban")
+	muteEnd		DateTime?	@map("mute_end") @db.Timestamp(6)
+	role		UserChannelRole @default(user)
+
+	@@unique([userId, channelId])
+}
+
+/// Relationship between users and their achievements
+///@example UserAchievement(userId: 1, achievmentId: 1, achievedAt: 2021-01-01 00:00:00)
+model UserAchievement {
+	ID			Int			@id @default(autoincrement())
+	userId		Int			@map("user_id")
+	achievementId	Int		@map("achievement_id")
+	achievedAt	DateTime	@default(now()) @map("achieved_at") @db.Timestamp(6)
+
+	@@unique([userId, achievementId])
+}
+
+/// @example GameStatistics(userId: 1, gameId: 1, key: 'bounce', value: '100'...)
+model GameStatistics {
+	ID			Int			@id @default(autoincrement())
+	userId		Int			@map("user_id")
+	gameId		Int			@map("game_id")
+	///@example `bounce`.. see interface statKey
+	key			String
+	value		Int
+	createdAt	DateTime	@default(now()) @map("created_at") @db.Timestamp(6)
+	updatedAt	DateTime	@default(now()) @map("updated_at") @db.Timestamp(6)
+
+
+	@@unique([userId, gameId, key])
+}
+
+model UserRelation {
+	ID			Int			@id @default(autoincrement())
+	userId		Int			@map("user_id")
+	relationId	Int			@map("relation_id")
+	status		UserRelationStatus
+	createdAt	DateTime	@default(now()) @map("created_at") @db.Timestamp(6)
+	updatedAt	DateTime	@default(now()) @map("updated_at") @db.Timestamp(6)
+}
+
+/// Information about played games
+model Game {
+	ID			Int			@id @default(autoincrement())
+	type		GameType	@default(classicPong)
+	players		Int[]		
+	createdAt	DateTime	@default(now()) @map("created_at") @db.Timestamp(6)
+	updatedAt	DateTime	@default(now()) @map("updated_at") @db.Timestamp(6)
+	duration	Int			@default(0)
+	winnerId	Int			@map("winner_id")
+	score		Int[]		@default([0, 0])
+}

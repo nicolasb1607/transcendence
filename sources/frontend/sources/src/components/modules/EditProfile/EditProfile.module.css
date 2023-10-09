@@ -1,0 +1,122 @@
+.mainContent {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--background-light);
+	border-radius: 8px;
+	padding: 0px 20px;
+	padding-bottom: 20px;
+}
+
+.blockTitle {
+	margin-bottom: 12px;
+}
+
+.mainContent h1 {
+	font-style: normal;
+	font-size: 22px;
+	font-weight: 500;
+	color: var(--text);
+	margin-bottom: 8px;
+}
+
+.mainContent h2 {
+	font-family: 'Lato';
+	font-style: normal;
+	font-weight: 600;
+	font-size: 18px;
+	color: var(--text-detail);
+	margin-bottom: 8px;
+}
+
+.mainContent p:not([class~="Mui-error"]) {
+	margin-bottom: 15px;
+	color: var(--text-detail);
+}
+
+
+.blockTitle hr {
+	border: 1px solid var(--border);
+}
+
+
+.themePickerContainer {
+	display: flex;
+	justify-content: flex-start;
+	gap: 2%;
+}
+
+.themePicker {
+	display: flex;
+	flex-direction: column;
+	padding: 4px 16px 20px 16px;
+	margin-bottom: 2%;
+	background-color: 	var(--background);
+	border-radius: 8px;
+	border: 2px solid transparent;
+	cursor: pointer;
+	color: var(--text);
+}
+
+.themePicker label span {
+	text-transform: capitalize;
+	color: var(--text);
+
+}
+.accountForm {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+.auth2FAcheck {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.nameFields{
+	display: flex;
+	flex-direction: row;
+}
+
+.imgThemePicker{
+	border: solid;
+	border-radius: 8px;
+	border-color: var(--background-light);
+}
+
+.formRow {
+	display: flex;
+	gap: 1vw;
+}
+
+.buttonContainer { 
+	display: flex;
+	justify-content: space-between;
+}
+.buttonContainer button {
+	font-weight: 600;
+	text-transform: capitalize;
+}
+.buttonSaveContainer button {
+	font-weight: 600;
+	width: 100px;
+	padding: 4px 16px;
+} 
+.buttonSaveContainer{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.buttonSaveContainer p {
+	margin: 0;
+	justify-content: center;
+	margin-top: 5px;
+	margin-right: 15px;
+}
+
+
+.button2FAContainer {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}

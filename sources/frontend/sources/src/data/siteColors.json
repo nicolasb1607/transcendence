@@ -1,0 +1,19 @@
+{
+	"federation": "#4180DB",
+	"federation-light": "#5E9DF6",
+	"federation-dark": "#255EB0",
+	"order": "#FF6950",
+	"order-light": "#FF8A76",
+	"order-dark": "#DB4B34",
+	"assembly": "#A061D1",
+	"assembly-light": "#C082F1",
+	"assembly-dark": "#7633AA",
+	"alliance": "#33C47F",
+	"alliance-light": "#65D7A1",
+	"alliance-dark": "#24a066",
+	"background": "#0C1A2A",
+	"background-light": "#142D4A",
+	"text": "#FFFFFF",
+	"text-detail": "#ADBEC6",
+	"border": "#6D86A3"
+}

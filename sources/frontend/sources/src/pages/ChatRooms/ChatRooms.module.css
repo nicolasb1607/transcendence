@@ -1,0 +1,96 @@
+#chatRooms {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.head {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+}
+.headTitle {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	width: 500px;
+}
+.headTitle h1 {
+	font-size: 2em;
+}
+.headTitle h1, .headTitle p {
+	margin: unset;
+}
+.headTitle p {
+	color: var(--text-detail);
+}
+.roomCard {
+	width: calc(100% - 32px);
+	padding: 16px;
+	background-color: var(--background-light);
+	border-radius: 16px;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	cursor: pointer;
+	position: relative;
+	transition-duration: 0.3s;
+}
+.roomCard:hover {
+	--box-color: color-mix(in srgb, var(--primary) 25%, transparent);
+	box-shadow: var(--box-color)  0 0 0 0.2rem;
+}
+.cardMore {
+	position: absolute;
+	right: 12px;
+	color: var(--text-detail);
+	transition-duration: 0.3s;
+	background-color: unset;
+}
+.cardMore:hover {
+	color: var(--primary);
+}
+.cardContent {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+.cardContent span {
+	font-family: Lato;
+	font-size: 1em;
+	font-weight: 700;
+}
+.cardContent img {
+	object-fit: cover;
+	border-radius: 100%;
+}
+.rooms h2 {
+	color: var(--border);
+	margin: 0 0 20px 0;
+	font-size: 1.2em;
+}
+.rooms > div {
+	width: 100%;
+	display: grid;
+	grid: auto-flow / 1fr 1fr 1fr 1fr;
+	gap: 32px;
+}
+.cardBottom {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.cardBottom span {
+	color: var(--border);
+	font-size: 0.85em;
+}
+.searchInput {
+	border-radius: 32px;
+}
+.searchInput input {
+	background-color: var(--background-light)!important;
+}
+@media screen and (max-width: 2100px) {
+	.rooms > div {
+		grid: auto-flow / 1fr 1fr 1fr;
+	}
+}

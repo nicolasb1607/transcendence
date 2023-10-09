@@ -1,0 +1,292 @@
+{
+	"ID": 1,
+	"name": "Chat de groupe",
+	"participants": [
+		{
+			"ID": 1,
+			"login": "X-AE-A-12",
+			"email": "user1@example.com",
+			"status": "offline",
+			"experience": {
+				"level": 18,
+				"exp": 0
+			},
+			"role": "admin"
+		},
+		{
+			"ID": 2,
+			"login": "user2",
+			"email": "user2@example.com",
+			"status": "offline",
+			"experience": {
+				"level": 18,
+				"exp": 0
+			},
+			"role": "moderator"
+		},
+		{
+			"ID": 3,
+			"login": "user3",
+			"email": "user3@example.com",
+			"status": "offline",
+			"experience": {
+				"level": 14,
+				"exp": 0
+			}
+		},
+		{
+			"ID": 4,
+			"login": "user4",
+			"email": "user4@example.com",
+			"status": "offline",
+			"experience": {
+				"level": 4,
+				"exp": 0
+			}
+		},
+		{
+			"ID": 5,
+			"login": "user5",
+			"email": "user5@example.com",
+			"status": "offline",
+			"experience": {
+				"level": 2,
+				"exp": 0
+			}
+		},
+		{
+			"ID": 6,
+			"login": "user6",
+			"email": "user6@example.com",
+			"status": "offline",
+			"experience": {
+				"level": 1,
+				"exp": 0
+			}
+		},
+		{
+			"ID": 7,
+			"login": "user7",
+			"email": "user7@example.com",
+			"status": "offline",
+			"experience": {
+				"level": 3,
+				"exp": 0
+			}
+		},
+		{
+			"ID": 8,
+			"login": "user8",
+			"email": "user8@example.com",
+			"status": "offline",
+			"experience": {
+				"level": 6,
+				"exp": 0
+			}
+		},
+		{
+			"ID": 9,
+			"login": "user9",
+			"email": "user9@example.com",
+			"status": "offline",
+			"experience": {
+				"level": 5,
+				"exp": 0
+			}
+		},
+		{
+			"ID": 10,
+			"login": "user10",
+			"email": "user10@example.com",
+			"status": "offline",
+			"experience": {
+				"level": 7,
+				"exp": 0
+			}
+		}
+	],
+	"messages": [
+		{
+			"ID": 1,
+			"emitterId": 1,
+			"content": "Bonjour tout le monde !",
+			"created_at": 1653890400
+		},
+		{
+			"ID": 2,
+			"emitterId": 2,
+			"content": "Salut ! Comment ça va ?",
+			"created_at": 1653890700
+		},
+		{
+			"ID": 3,
+			"emitterId": 3,
+			"content": "Ça va bien, merci ! Et toi ?",
+			"created_at": 1653891000
+		},
+		{
+			"ID": 4,
+			"emitterId": 4,
+			"content": "Je vais bien aussi. Quoi de neuf ?",
+			"created_at": 1653891300
+		},
+		{
+			"ID": 5,
+			"emitterId": 5,
+			"content": "Rien de spécial, juste en train de travailler.",
+			"created_at": 1653891600
+		},
+		{
+			"ID": 6,
+			"emitterId": 6,
+			"content": "Moi aussi, beaucoup de travail en ce moment.",
+			"created_at": 1653891900
+		},
+		{
+			"ID": 7,
+			"emitterId": 7,
+			"content": "C'est la vie d'adulte !",
+			"created_at": 1653892200
+		},
+		{
+			"ID": 8,
+			"emitterId": 8,
+			"content": "Quelqu'un veut prendre un café plus tard ?",
+			"created_at": 1653892500
+		},
+		{
+			"ID": 9,
+			"emitterId": 9,
+			"content": "Je suis partant !",
+			"created_at": 1653892800
+		},
+		{
+			"ID": 10,
+			"emitterId": 10,
+			"content": "Moi aussi, allons-y !",
+			"created_at": 1653893100
+		},
+		{
+			"ID": 11,
+			"emitterId": 1,
+			"content": "Qu'est-ce que vous pensez du nouveau film qui est sorti ?",
+			"created_at": 1653893400
+		},
+		{
+			"ID": 12,
+			"emitterId": 2,
+			"content": "Je ne l'ai pas encore vu, mais j'ai entendu de bonnes critiques.",
+			"created_at": 1653893700
+		},
+		{
+			"ID": 13,
+			"emitterId": 3,
+			"content": "Moi non plus, mais j'aimerais bien le regarder ce week-end.",
+			"created_at": 1653894000
+		},
+		{
+			"ID": 14,
+			"emitterId": 4,
+			"content": "On peut organiser une sortie au cinéma tous ensemble.",
+			"created_at": 1653894300
+		},
+		{
+			"ID": 15,
+			"emitterId": 5,
+			"content": "Bonne idée ! Quel jour vous convient le mieux ?",
+			"created_at": 1653894600
+		},
+		{
+			"ID": 16,
+			"emitterId": 6,
+			"content": "Je suis libre samedi après-midi.",
+			"created_at": 1653894900
+		},
+		{
+			"ID": 17,
+			"emitterId": 7,
+			"content": "Dimanche matin me conviendrait mieux.",
+			"created_at": 1653895200
+		},
+		{
+			"ID": 18,
+			"emitterId": 8,
+			"content": "Samedi soir serait parfait pour moi.",
+			"created_at": 1653895500
+		},
+		{
+			"ID": 19,
+			"emitterId": 9,
+			"content": "Je suis flexible, donc je peux m'adapter à vos horaires.",
+			"created_at": 1653895800
+		},
+		{
+			"ID": 20,
+			"emitterId": 10,
+			"content": "Je préfère dimanche après-midi. On peut se retrouver à 15h ?",
+			"created_at": 1653896100
+		},
+		{
+			"ID": 21,
+			"emitterId": 1,
+			"content": "Parfait, dimanche à 15h au cinéma !",
+			"created_at": 1653896400
+		},
+		{
+			"ID": 22,
+			"emitterId": 2,
+			"content": "J'ai hâte de voir ce film avec vous tous !",
+			"created_at": 1653896700
+		},
+		{
+			"ID": 23,
+			"emitterId": 3,
+			"content": "Ça va être super !",
+			"created_at": 1653897000
+		},
+		{
+			"ID": 24,
+			"emitterId": 4,
+			"content": "N'oubliez pas d'acheter les billets à l'avance.",
+			"created_at": 1653897300
+		},
+		{
+			"ID": 25,
+			"emitterId": 5,
+			"content": "Je m'en occupe demain matin.",
+			"created_at": 1653897600
+		},
+		{
+			"ID": 26,
+			"emitterId": 6,
+			"content": "Merci pour l'organisation !",
+			"created_at": 1653897900
+		},
+		{
+			"ID": 27,
+			"emitterId": 7,
+			"content": "Vivement dimanche !",
+			"created_at": 1653898200
+		},
+		{
+			"ID": 28,
+			"emitterId": 8,
+			"content": "J'ai entendu dire que ce film était très drôle.",
+			"created_at": 1653898500
+		},
+		{
+			"ID": 29,
+			"emitterId": 9,
+			"content": "Je suis curieux de le découvrir.",
+			"created_at": 1653898800
+		},
+		{
+			"ID": 30,
+			"emitterId": 10,
+			"content": "On va bien rigoler ensemble !",
+			"created_at": 1653899100
+		}
+	],
+	"type": "general",
+	"created_at": 1653890000
+}

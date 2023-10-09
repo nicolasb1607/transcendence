@@ -1,0 +1,172 @@
+.container{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	overflow: visible;
+	height: 194px;
+	width: 168px;
+	background-color: var(--background-light);
+	align-items: center;
+	border-radius: 8px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.menuButton{
+	position: absolute;
+	color: var(--text-detail);
+	margin: 0;
+	padding: 0;
+	right: 10px;
+	top: 10px;
+	border-radius: 50%;
+	min-width: 10px !important;
+}
+
+.pseudoSection{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+}
+
+[data-isactive=true].dot{
+	width: 5px;
+	height: 5px;
+	background-color: #01D370;
+	border-radius: 50%;
+}
+
+
+
+/* ---------CONTEXTUAL BUTTON------------ */
+
+.frienshipButton{
+	width: 144px;
+	height: 25px;
+	border-radius: 4px;
+	padding: 0px 5px 0px 5px;
+	color: var(--text-detail);
+	border-color: var(--text-detail);
+}
+
+.frienshipButton::after {
+	font-size: 13px;
+	text-transform: capitalize;
+}
+
+.frienshipButton:hover{
+	border-color: var(--text);
+}
+
+.frienshipButton:hover:after {
+	color: var(--text);
+}
+
+
+
+/* Friend Context */
+
+[data-friendship='friend'].frienshipButton::after{
+	content: "Friend";
+}
+
+[data-friendship='friend'].frienshipButton:hover{
+	background-color: rgb(245, 61, 73, 0.25);
+	border-color: rgb(245, 61, 73);;
+}
+
+[data-friendship='friend'].frienshipButton:hover::after{
+	content: "Remove";
+	color: rgb(245, 61, 73);
+}
+
+
+/* Requested Context */
+
+[data-friendship='requested'].frienshipButton{
+ 	background-color: rgb(65, 128, 219, 0.5);
+	border: none;
+}
+
+[data-friendship='requested'].frienshipButton::after{
+	content: "Accept Invitation";
+	color: var(--text);
+}
+
+[data-friendship='requested'].frienshipButton:hover{
+	background-color: rgb(65, 128, 219);
+	border-color: var(--text);
+}
+
+/* Requesting Context */
+
+[data-friendship='requesting'].frienshipButton::after{
+	content: "Pending Invitation";
+}
+
+[data-friendship='requesting'].frienshipButton:hover{
+	background-color: rgb(245, 61, 73, 0.25);
+	border-color: rgb(245, 61, 73);;
+}
+
+[data-friendship='requesting'].frienshipButton:hover::after{
+	content: "Cancel Invitation";
+	color: rgb(245, 61, 73);
+}
+
+/* Blocked Context */
+
+[data-friendship='blocked'].frienshipButton{
+	color: var(--text-detail);
+	border-color: var(--text-detail);
+}
+
+[data-friendship='blocked'].frienshipButton:hover{
+	background-color: #01D370;
+}
+
+[data-friendship='blocked'].frienshipButton::after{
+	content: "Blocked";
+}
+
+[data-friendship='blocked'].frienshipButton:hover:after{
+	content:"Unblock";
+	color: var(--text);
+}
+
+
+/* None Context */
+
+[data-friendship='none'].frienshipButton{
+	color: var(--text-detail);
+	border-color: var(--text-detail);
+}
+
+[data-friendship='none'].frienshipButton:hover{
+	background-color: rgb(173, 190, 198, 0.25);
+}
+
+[data-friendship='none'].frienshipButton::after{
+	content: "Add to friend";
+}
+
+/* Consulting Context */
+
+[data-friendship='consulting'].frienshipButton{
+	color: var(--text-detail);
+	border-color: var(--text-detail);
+}
+
+[data-friendship='consulting'].frienshipButton:hover{
+	background-color: rgb(173, 190, 198, 0.25);
+}
+
+[data-friendship='consulting'].frienshipButton::after{
+	content: "Go to Profile";
+}
+
+
+

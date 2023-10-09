@@ -1,0 +1,155 @@
+[
+	{
+	  "ID": 6,
+	  "login": "Stellar-Navigator",
+	  "avatar": "avatars/public/federation_avatar1.jpg",
+	  "level": 1,
+	  "friendship": "friend",
+	  "isActive": true
+	},
+	{
+	  "ID": 2,
+	  "login": "IngloriousBasterd",
+	  "avatar": "avatars/public/order_avatar2.jpg",
+	  "level": 3,
+	  "friendship": "requested",
+	  "isActive": false
+	},
+	{
+	  "ID": 4,
+	  "login": "ThecloneWars",
+	  "avatar": "avatars/public/assembly_avatar1.jpg",
+	  "level": 2,
+	  "friendship": "blocked",
+	  "isActive": false
+	},
+	{
+	  "ID": 5,
+	  "login": "TheBadBatch",
+	  "avatar": "avatars/public/assembly_avatar2.jpg",
+	  "level": 2,
+	  "friendship": "none",
+	  "isActive": true
+	},
+	{
+	  "ID": 6,
+	  "login": "GalacticExplorer",
+	  "avatar": "avatars/public/federation_avatar2.jpg",
+	  "level": 2,
+	  "friendship": "none",
+	  "isActive": true
+	},
+	{
+	  "ID": 7,
+	  "login": "DarkVengeance",
+	  "avatar": "avatars/public/order_avatar2.jpg",
+	  "level": 4,
+	  "friendship": "friend",
+	  "isActive": false
+	},
+	{
+	  "ID": 8,
+	  "login": "CosmicWarrior",
+	  "avatar": "avatars/public/federation_avatar3.jpg",
+	  "level": 3,
+	  "friendship": "requested",
+	  "isActive": true
+	},
+	{
+	  "ID": 9,
+	  "login": "ShadowReaper",
+	  "avatar": "avatars/public/alliance_avatar1.jpg",
+	  "level": 1,
+	  "friendship": "blocked",
+	  "isActive": false
+	},
+	{
+	  "ID": 10,
+	  "login": "StarlightSentinel",
+	  "avatar": "avatars/public/alliance_avatar2.jpg",
+	  "level": 2,
+	  "friendship": "none",
+	  "isActive": true
+	},
+	{
+	  "ID": 11,
+	  "login": "OrderOfLight",
+	  "avatar": "avatars/public/order_avatar3.jpg",
+	  "level": 3,
+	  "friendship": "friend",
+	  "isActive": true
+	},
+	{
+	  "ID": 12,
+	  "login": "CelestialGuardian",
+	  "avatar": "avatars/public/federation_avatar4.jpg",
+	  "level": 4,
+	  "friendship": "requested",
+	  "isActive": false
+	},
+	{
+	  "ID": 13,
+	  "login": "AllianceProtector",
+	  "avatar": "avatars/public/alliance_avatar3.jpg",
+	  "level": 3,
+	  "friendship": "blocked",
+	  "isActive": true
+	},
+	{
+	  "ID": 14,
+	  "login": "AssemblyDefender",
+	  "avatar": "avatars/public/assembly_avatar3.jpg",
+	  "level": 4,
+	  "friendship": "none",
+	  "isActive": false
+	},
+	{
+	  "ID": 15,
+	  "login": "CosmicVoyager",
+	  "avatar": "avatars/public/federation_avatar2.jpg",
+	  "level": 1,
+	  "friendship": "friend",
+	  "isActive": true
+	},
+	{
+	  "ID": 16,
+	  "login": "DarkKnight",
+	  "avatar": "avatars/public/alliance_avatar4.jpg",
+	  "level": 2,
+	  "friendship": "requested",
+	  "isActive": false
+	},
+	{
+	  "ID": 17,
+	  "login": "EternalGuardian",
+	  "avatar": "avatars/public/alliance_avatar1.jpg",
+	  "level": 3,
+	  "friendship": "none",
+	  "isActive": true
+	},
+	{
+	  "ID": 18,
+	  "login": "NebulaSeeker",
+	  "avatar": "avatars/public/assembly_avatar2.jpg",
+	  "level": 2,
+	  "friendship": "blocked",
+	  "isActive": false
+	},
+	{
+	  "ID": 19,
+	  "login": "GalacticGuardian",
+	  "avatar": "avatars/public/federation_avatar4.jpg",
+	  "level": 4,
+	  "friendship": "none",
+	  "isActive": true
+	},
+	{
+	  "ID": 20,
+	  "login": "ShadowWalker",
+	  "avatar": "avatars/public/order_avatar1.jpg",
+	  "level": 1,
+	  "friendship": "friend",
+	  "isActive": false
+	}
+  ]
+  

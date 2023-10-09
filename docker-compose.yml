@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  postgres:
+    hostname: postgres
+    image: transcendance.postgres
+    restart: always
+    container_name: postgres
+    #N'est pas rebuild si existant
+    build: 
+      context: ./sources/database/
+      dockerfile: postgres.Dockerfile
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - ./sources/database/data/postgres:/var/lib/postgresql/data
+    networks:
+      - transcendanceNetwork
+    ports:
+      - "5432:5432"
+    
+
+  backend:
+    hostname: backend
+    image: transcendance.backend
+    container_name: backend
+    build:
+      context: ./sources
+      dockerfile: backend.Dockerfile
+    depends_on:
+      - postgres
+    restart: always
+    environment:
+      - DATABASE_URL=${DATABASE_URL}
+      - API_PORT=${API_PORT}
+      - SITE_URL=${SITE_URL}
+      - JWT_SECRET=${JWT_SECRET}
+      - SOCKET_URL=${SOCKET_URL}
+      - API_URL=${API_URL}
+      - GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
+      - GOOGLE_SECRET=${GOOGLE_SECRET}
+      - GOOGLE_REDIRECT_URL=${GOOGLE_REDIRECT_URL}
+      - FORTY_TWO_CLIENT_ID=${FORTY_TWO_CLIENT_ID}
+      - FORTY_TWO_SECRET=${FORTY_TWO_SECRET}
+      - FORTY_TWO_REDIRECT_URL=${FORTY_TWO_REDIRECT_URL}
+    networks:
+      - transcendanceNetwork
+    ports:
+      - ${API_PORT}:${API_PORT}
+
+volumes:
+  postgres:
+
+networks:
+  transcendanceNetwork: 
+    driver: bridge

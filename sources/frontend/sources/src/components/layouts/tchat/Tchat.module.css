@@ -1,0 +1,332 @@
+#tchatContainer {
+	padding: 20px 20px 20px 0;
+	height: 100%;
+	max-height: 100%;
+	overflow: hidden;
+	position: relative;
+}
+#passHead {
+	color: var(--text-detail);
+	text-align: center;
+}
+#notSeen {
+	position: absolute;
+	bottom: 100px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: var(--primary);
+	padding: 8px 12px;
+	border-radius: 4px;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	color: var(--text);
+}
+#notSeen svg {
+	height: 20px;
+	width: 20px;
+	margin-left: 4px;
+}
+#tchat {
+	background-color: var(--background-light);
+	height: 100%;
+	border-radius: 16px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: calc(376px + 32px);
+}
+#tchatHead {
+	padding: 16px;
+	display: flex;
+	color: #818E9D;
+	font-weight: bold;
+	align-items: center;
+	justify-content: space-between;
+}
+#tabs button {
+	min-height: unset;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	text-transform: capitalize;
+	font-weight: 600;
+	color: white;
+}
+#tabs button[class~="Mui-selected"] {
+	color: var(--primary)
+}
+#tabs svg {
+	width: 16px;
+	height: 16px;
+}
+#onlinePeople {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 14px;
+	gap: 8px;
+}
+#onlinePeople > svg:first-child, #closeIcon {
+	font-size: 20px;
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+#onlinePeople > svg:first-child:hover,#closeIcon:hover {
+	color: var(--primary);
+}
+#onlinePeople > span {
+	color: inherit;
+}
+.row {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 4px;
+	padding: 6px 8px;
+	/* width: 360px; */
+}
+.row > div:first-child {
+	height: 24px;
+	width: 24px;
+}
+.rowContainer {
+	position: relative;
+}
+.rowContainer span, .rowContainer .messageLong {
+	font-weight: 600;
+}
+[data-is-long=true] .row {
+	padding-bottom: 0px;
+}
+[data-user-role="admin"]::before, [data-user-role="moderator"]::before {
+	content: "";
+	height: 80%;
+	width: 3px;
+	background-color: red;
+	position: absolute;
+	border-radius: 4px;
+	left: -12px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+[data-user-role="admin"]::before {
+	background-color: #01D370;
+}
+[data-user-role="moderator"]::before {
+	background-color: #EAFF6C;
+}
+[data-user-role="admin"] .row, [data-user-role="moderator"] .row {
+	background-color: var(--background);
+	border-radius: 4px;
+}
+[data-is-mention="true"] .row {
+	background: #eaff6c33;
+}
+.mention {
+	background-color: color-mix(in srgb, var(--primary) 50%, transparent);
+    border-radius: 5px;
+    padding: 0 3px;
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+.mention:hover {
+	background-color: var(--primary);
+}
+[data-is-long=true][data-user-role="admin"] .row, [data-is-long=true][data-user-role="moderator"] .row {
+	border-radius: 4px 4px 0px 0px;
+}
+[data-user-role="admin"] .messageLong, [data-user-role="moderator"] .messageLong {
+	background-color: var(--background);
+	border-radius: 0px 0px 4px 4px;
+}
+.profilPic {
+	width: 24px;
+	height: 24px;
+	object-fit: contain;
+	cursor: pointer;
+	border-radius: 4px;
+}
+.row .login {
+	color: var(--border);
+	font-weight: 600;
+}
+[data-user-role="admin"] .login {
+	color: #01D370;
+}
+[data-user-role="moderator"] .login {
+	color: #EAFF6C;
+}
+.cat {
+    font-size: 13px;
+    font-weight: 600;
+    background: var(--background);
+    padding: 4px 12px;
+}
+.cat span {
+	color: var(--text-detail);
+}
+#searchUser  {
+	padding: 8px 12px;
+}
+#privateConversations,#tchatMessages,.privateConvRowContent {
+	display: flex;
+	flex-direction: column;
+}
+.privateConvRowContent {
+	flex: 1;
+	justify-content: space-between;
+}
+.privateConvRowContent > :last-child {
+	color: var(--text-detail);
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 260px;
+}
+.privateConvRow {
+	display: flex;
+	padding: 16px;
+	gap: 12px;
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+.privateConvRow:hover {
+	background-color: color-mix(in srgb, var(--background-light), white 10%);
+}
+.privateConvRowHead {
+	display: flex;
+	justify-content: space-between;
+}
+.privateConvRowHead > :last-child {
+	color: var(--text-detail);
+}
+.avatar {
+	width: 52px;
+	height: 52px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+#tchatMessages {
+	gap: 12px;
+	padding: 14px 16px;
+	font-size: 15px;
+	height: auto;
+	overflow: hidden scroll;
+	flex: 1;
+	transition: all 0.3s ease 0s;
+	scrollbar-width: thin;/** Firefox */
+	scrollbar-color: var(--border) var(--background-light);/** Firefox */
+	width: 382px;
+}
+#tchatMessages::-webkit-scrollbar {
+	width: 6px;
+}
+#tchatMessages::-webkit-scrollbar-track {
+	background: var(--background-light);
+}
+#tchatMessages::-webkit-scrollbar-thumb {
+	background-color: var(--background-light);
+	border-radius: 20px;
+	border: 3px solid var(--border);
+}
+
+@media (min-width:959px) and (max-width:2000px){
+	#tchatMessages {
+		width: 340px;
+	}
+	#tchat {
+		width: calc(340px + 24px);
+	}
+}
+
+[data-user-role="admin"] .messageLong {
+	/** avatar w + badge w + gap * 4 */
+	--message-left-spacing: calc(24px + 50px + 16px);
+}
+[data-user-role="moderator"] .messageLong {
+	/** avatar w + badge w + gap * 4 */
+	--message-left-spacing: calc(24px + 75px + 16px);
+}
+[data-user-role="user"] .messageLong {
+	/** avatar w + badge w + gap * 4 */
+	--message-left-spacing: calc(24px + 60px + 16px);
+}
+.messageLong {
+	padding-left: var(--message-left-spacing);
+	width: calc(100% - (--message-left-spacing));
+	word-break: break-word;
+	line-height: 22px;
+	padding-bottom: 6px;
+}
+#tchatInputArea {
+	padding: 14px 16px;
+}
+#disconnected {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	color: var(--text-detail);
+	margin: 1em;
+}
+#disconnected b {
+	font-weight: 600;
+	text-transform: uppercase;
+}
+#disconnected span {
+	color: var(--text-detail);
+}
+#editUser [class~="MuiDialog-paper"] {
+	background-color: var(--background);
+	background-image: unset;
+	width: 360px;
+	padding: 16px;
+}
+#editUser [class~="MuiTypography-root"] {
+	background-color: var(--background);
+	font-size: 24px;
+	font-weight: 700;
+}
+#editUser [class~="MuiFormControl-root"] {
+	width: 100%;
+}
+#editUser [class~="MuiSelect-select"] {
+	background-color: var(--background-light);
+}
+#editUser [class~="MuiDialogContent-root"] {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+#radioArea span,#editUser [class~="MuiFormLabel-root"] {
+	font-size: 1em!important;
+	font-family: 'Lato', sans-serif;
+}
+#actions {
+	display: flex;
+	justify-content: space-between
+}
+
+.systemMessage {
+	padding: 4px;
+    background-color: #ff00001f;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 4px;
+}
+[data-is-channel-member=false] {
+    filter: opacity(0.5);
+    cursor: not-allowed;
+}
+#fab {
+	right: 4vh;
+    bottom: 4vh;
+    position: fixed;
+    background-color: var(--primary);
+    color: white;
+	transition-duration: 0.3s;
+}
+#fab:hover {
+	background-color: var(--primary-dark);
+}

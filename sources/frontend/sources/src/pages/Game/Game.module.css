@@ -1,0 +1,111 @@
+#content,#awaitingChallengeContent {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 16px;
+}
+#contentGame {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	width: 100%;
+	height: 100%;
+}
+#content {
+	max-width: 1000px;
+	width: 100%;
+}
+#awaitingChallengeContent {
+	align-items: center;
+}
+#awaitingChallenge {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 2;
+}
+#headBar {
+	max-width: 100%;
+	width: calc(100% - 24px);
+	display: flex;
+	background-color: var(--background-light);
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px;
+	border-radius: 8px;
+}
+#goBack {
+	background-color: var(--background);
+	border-radius: 100%;
+	padding: 4px;
+	color: var(--border);
+	width: 32px;
+	height: 32px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#headBar h1, #awaitingChallenge h1 {
+	margin: unset;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+#headBarLeft {
+	all: unset;
+	cursor: pointer;
+	transition-duration: 0.3s;
+}
+#headBarLeft:hover #goBack {
+	color: var(--primary);
+}
+#headBarLeft, #headBarRight {
+	width: 200px;
+}
+#headBarCenter,#headBarLeft,#awaitingChallenge,#bottomMenu {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+}
+#bottomMenuContainer {
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+	margin-bottom: 1em;
+}
+#bottomMenu {
+	background-color: var(--background-light);
+	border-radius: 12px;
+	width: fit-content;
+	padding: 8px 12px;
+	gap: 12px;
+}
+#awaitingChallenge {
+	justify-content: center;
+}
+#headBarRight span{
+	text-align: right;
+}
+#gameArea {
+	max-width: 1000px;
+	width: 100%;
+	max-height: calc((1000px / 4) * 3);
+	aspect-ratio: 4/3;
+	background-color: #2C488F;
+	border-radius: 8px;
+	overflow: hidden;
+	position: relative;
+}
+.titleWithSub {
+	display: flex;
+	flex-direction: column;
+	text-transform: capitalize;
+}
+.titleWithSub > span:first-child {
+	color: var(--text);
+	font-weight: 600;
+	font-size: 16px;
+}
+.titleWithSub > span:last-child {
+	color: var(--text-detail);
+	font-size: 14px;
+}

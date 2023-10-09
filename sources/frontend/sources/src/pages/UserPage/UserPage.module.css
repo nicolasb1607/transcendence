@@ -1,0 +1,68 @@
+#contentContainer::before {
+	content: "";
+	background: url(~/public/userPageBackground.png)0 0 no-repeat;
+	background-position: right;
+	background-size: cover;
+	position: absolute;
+	margin-left: 100px;
+	width: 100vw;
+	height: 100vh;
+	top: 0px;
+	right: -40px;
+	filter: opacity(0.1);
+	z-index: -1;
+}
+
+[data-tabindex="gameHistory"].tab:after {
+	position: absolute;
+	bottom: 0;
+	height: 300px;
+	width: calc(100% + 40px);
+	margin-left: -20px;
+	content: "";
+	background: linear-gradient(180deg, rgba(12,26,42,0) 0%, var(--background) 100%);
+	pointer-events: none;
+}
+
+
+.mainContent {
+	display: flex;
+	justify-content: space-between;
+	gap: 60px;
+}
+
+@media (min-width:959px) and (max-width:2000px){
+	.mainContent {
+		gap: 40px;
+	}
+}
+
+
+.tab {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: stretch;
+	/* margin-left: 2%; */
+	width: 100%;
+}
+
+.menu {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 5%;
+	border-radius: 10px;
+	width: 100%;
+	margin-top: 50px;
+}
+
+.tab.global {
+	border-radius: 8px;;
+}
+
+.separator {
+	width: 2px;
+	height: 70%;
+	color: white;
+}
+

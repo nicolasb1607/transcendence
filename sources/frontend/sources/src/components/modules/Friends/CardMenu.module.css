@@ -1,0 +1,48 @@
+.menu{
+	position:absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	height: 144px;
+	width: 168px;
+	bottom: 0;
+	padding: 5px;
+	border-radius: 8px;
+	background: rgb(12, 26, 42, 0.85);
+	backdrop-filter: blur(10px);
+  	transition: 1s;
+}
+
+.menuOptionButton{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	text-transform: capitalize;
+	color: var(--text-detail);
+}
+
+.menuOptionButton:hover{
+	background-color: rgb(255, 255, 255, 0.10);
+}
+
+.hrBlockButton {
+	margin: 0;
+	padding: 0;
+	width: 25px;
+	border-color: #B51D35;
+}
+
+.menuBlockButton{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	color: #B51D35;
+}
+
+.menuBlockButton:hover{
+	background-color: rgb(181, 29, 53, 0.35);
+	color: var(--text);
+
+}

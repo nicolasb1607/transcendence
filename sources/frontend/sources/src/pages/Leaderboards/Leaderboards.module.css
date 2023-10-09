@@ -1,0 +1,53 @@
+#leaderboard {
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	max-width: 1000px;
+	margin: 20px auto auto auto;
+}
+#topBar {
+	display: flex;
+	gap: 12px;
+}
+a,.player {
+	cursor: pointer;
+}
+#topBar [class^="MuiTabs-root"] {
+	flex: 1;
+}
+#topBar button {
+	font-weight: 600;
+	font-size: 0.9em;
+	font-family: "Lato", sans-serif;
+}
+#topBar > div {
+	background-color: var(--background-light);
+	border-radius: 8px;
+}
+div[class*="MuiOutlinedInput-root"] {
+	width: 200px
+}
+#topBar fieldset {
+	border: unset;
+}
+#endLeaderboard {
+	background-color: var(--background-light);
+	border-radius: 8px;
+	padding: 0 12px 12px 12px;
+}
+.topLeaderboard {
+	display: flex;
+	gap: 12px;
+	width: 100%;
+}
+.tableHeader {
+	display: flex;
+	height: 40px;
+}
+.tableHeader  span {
+	flex: 1;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

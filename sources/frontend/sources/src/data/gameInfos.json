@@ -1,0 +1,14 @@
+{
+	"classic": {
+		"name": "Classic Pong",
+		"id": "classic",
+		"logo": "/classic.svg",
+		"link": "/pong/classic"
+	},
+	"spatial": {
+		"name": "Spatial Pong",
+		"id": "spatial",
+		"logo": "/astronaut.svg",
+		"link": "/pong/spatialPong"
+	}
+}

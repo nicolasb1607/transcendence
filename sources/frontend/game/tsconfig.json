@@ -1,0 +1,22 @@
+{
+	"extends": "@tsconfig/node16/tsconfig.json",
+	"compilerOptions": {
+		"outDir": "dist",
+		"noImplicitAny": true,
+		"module": "ES2022",
+		"lib": [
+			"dom", //DOM
+			"dom.iterable", // This library extends the "dom" library to include iterable collections like NodeList, HTMLCollection, and others.
+			"esnext"//ECMAScript
+		], // List of library files to be included in the compilation
+		"strict": true,
+		"resolveJsonModule": true, // Include modules imported with .json extension
+		"declaration": true, // Generate corresponding .d.ts file
+		"moduleResolution": "node",
+		"removeComments": true,
+		"types": ["node"]
+	},
+	"include": ["src/**/*", "index.d.ts","tests/**/*"],
+	"exclude": ["node_modules", "dist","assets"],
+	"types": ["node"]
+}

@@ -1,0 +1,27 @@
+[
+	{
+		"imgSrc": "/realAstronaut.svg",
+		"alt": "astronaut image",
+		"title": "Welcome aboard traveler",
+		"text": "Ready for a challenge? Enter the zero-gravity world of space pong, where thousands of passionate players compete for glory and recognition. With higher stakes and intense rivalries, players must use finesse and strategy to survive the cutthroat universe of space pong. Join now and become a champion!",
+		"textButton": "PLAY NOW !",
+		"link": "/pong/classic"
+	},
+	{
+		"imgSrc": "/realAstronaut.svg",
+		"alt": "astronaut image",
+		"title": "Fight thousand of opponants",
+		"text": "In a distant future, humanity and animals has colonized many planets and established communication networks throughout the galaxy. A game of pong was created in space, where players compete for supremacy in a zero-gravity environment.",
+		"textButton": ""
+	},
+	{
+		"title": "Earn Achievements",
+		"text": " As you progress, earn prestigious badges that symbolize your mastery of the game's unique mechanics. From the Gravity Manipulator badge, showcasing your adeptness at manipulating gravitational forces, to the  Wormhole Wizard badge, earned by skillfully navigating through gravitational anomalies, and finally, the  Champion III badge, the highest honor bestowed upon those who reign supreme in the Spatial pong arena."
+	},
+	{
+		"title": "Ready to conquer space pong?",
+		"text": "Join the Zero-Gravity Battle Today! Embark on an epic journey of skill and strategy, where you'll face off against passionate players from across the galaxy. Experience the thrill of competing in a game like no other, where the laws of gravity are your playground. Are you up for the challenge? Sign up now and claim your place among the stars as a Space Pong champion! ",
+		"textButton": "Sign up now",
+		"link": "/auth/register"
+	}
+]

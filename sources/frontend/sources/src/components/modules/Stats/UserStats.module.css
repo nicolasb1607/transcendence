@@ -1,0 +1,80 @@
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 32px;
+}
+.card {
+	box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.12), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 2px 4px -1px rgba(0, 0, 0, 0.20);
+	background-color: var(--background-light);
+	border-radius: 8px;
+}
+.cardHeader {
+	display: flex;
+	gap: 32px;
+	align-items: center;
+	padding: 20px;
+}
+.cardHeader > div {
+	display: flex;
+	gap: 16px;
+}
+.cardHeader h1 {
+	font-size: 24px;
+	font-weight: 400;
+	margin: unset;
+}
+.banner {
+	width: 100%;
+	object-fit: contain;
+}
+#playTime {
+	gap: 8px;
+}
+#playTime span {
+	color: var(--text-detail);
+}
+#table > div {
+	padding: 0px 24px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+#table > div:nth-child(2n + 1) {
+	background-color: var(--background);
+}
+#table > div > span:first-child {
+	font-weight: 700;
+	text-transform: capitalize;
+}
+#stats > div:first-child {
+	display: flex;
+	gap: 8px;
+	width: calc(100% - 40px);
+	padding: 0 20px;
+	margin-top: -20px;
+}
+#lowerStats {
+	padding: 12px 32px;
+	display: flex;
+	justify-content: space-between;
+}
+.statCard {
+	width: 100%;
+	background-color: var(--background);
+	border-radius: 8px;
+	padding: 12px 20px;
+}
+.statCard, .lower {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.statCard > span:first-child, .lower > span:first-child {
+	font-weight: 700;
+	color: var(--border);
+}
+.statCard > span:last-child, .lower > span:last-child {
+	font-weight: 700;
+	font-size: 20px;
+}

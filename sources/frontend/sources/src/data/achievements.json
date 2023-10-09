@@ -1,0 +1,256 @@
+{
+	"badges": [
+		{
+			"id": 1,
+			"name": "Beginner",
+			"group": "score_points",
+			"description": "Score 100 points",
+			"image": "beginner_badge.svg",
+			"postfix": "point(s)",
+			"parent": 2,
+			"unlock": {
+				"statKey": "score",
+				"statValue": 100
+			}
+		},
+		{
+			"id": 2,
+			"name": "Expert",
+			"group": "score_points",
+			"description": "Score 500 points",
+			"image": "expert_badge.svg",
+			"postfix": "point(s)",
+			"parent": 3,
+			"unlock": {
+				"statKey": "score",
+				"statValue": 500
+			}
+		},
+		{
+			"id": 3,
+			"name": "Master",
+			"group": "score_points",
+			"description": "Score 1000 points",
+			"image": "master_badge.svg",
+			"unlock": {
+				"statKey": "score",
+				"statValue": 1000
+			}
+		},
+		{
+			"id": 4,
+			"name": "Defender",
+			"group": "block_shots",
+			"description": "Block 50 opponent shots",
+			"image": "defender_badge.svg",
+			"postfix": "shot(s)",
+			"parent": 5,
+			"unlock": {
+				"statKey": "bounce",
+				"statValue": 50
+			}
+		},
+		{
+			"id": 5,
+			"name": "Defender II",
+			"group": "block_shots",
+			"description": "Block 100 opponent shots",
+			"image": "defender_badge2.svg",
+			"postfix": "shot(s)",
+			"parent": 6,
+			"unlock": {
+				"statKey": "bounce",
+				"statValue": 100
+			}
+		},
+		{
+			"id": 6,
+			"name":"Defender III",
+			"group": "block_shots",
+			"description": "Block 200 opponent shots",
+			"image": "defender_badge3.svg",
+			"unlock": {
+				"statKey": "bounce",
+				"statValue": 200
+			}
+		},
+		{
+			"id": 7,
+			"name": "Supreme Speed",
+			"group": "game_speed",
+			"description": "Reach a game speed of 200",
+			"image": "speed_badge.svg",
+			"postfix": "km/h",
+			"parent": 8,
+			"unlock": {
+				"statKey": "max_game_speed",
+				"statValue": 200
+			}
+		},
+		{
+			"id": 8,
+			"name": "Supreme Speed II",
+			"group": "game_speed",
+			"description": "Reach a game speed of 300",
+			"image": "speed_badge2.svg",
+			"postfix": "km/h",
+			"parent": 9,
+			"unlock": {
+				"statKey": "max_game_speed",
+				"statValue": 300
+			}
+		},
+		{
+			"id": 9,
+			"name": "Supreme Speed III",
+			"group": "game_speed",
+			"description": "Reach a game speed of 400",
+			"image": "speed_badge3.svg",
+			"unlock": {
+				"statKey": "max_game_speed",
+				"statValue": 400
+			}
+		},
+		{
+			"id": 10,
+			"name": "Invincible",
+			"description": "Do not lose a point for 10 minutes",
+			"image": "invincible_badge.svg"
+		},
+		{
+			"id": 11,
+			"name": "Marathoner",
+			"description": "Play for one hour without interruption",
+			"image": "marathoner_badge.svg",
+			"unlock": {
+				"statKey": "play_time",
+				"statValue": 3600
+			}
+		},
+		{
+			"id": 12,
+			"name": "Champion",
+			"group": "win_games",
+			"description": "Win 10 consecutive games",
+			"image": "champion_badge.svg",
+			"postfix": "win(s)",
+			"parent": 13,
+			"unlock": {
+				"statKey": "win",
+				"statValue": 10
+			}
+		},
+		{
+			"id": 13,
+			"name": "Champion II",
+			"group": "win_games",
+			"description": "Win 20 consecutive games",
+			"image": "champion_badge2.svg",
+			"postfix": "win(s)",
+			"parent": 14,
+			"unlock": {
+				"statKey": "win",
+				"statValue": 20
+			}
+		},
+		{
+			"id": 14,
+			"name": "Champion III",
+			"group": "win_games",
+			"description": "Win 30 consecutive games",
+			"image": "champion_badge3.svg",
+			"unlock": {
+				"statKey": "win",
+				"statValue": 30
+			}
+		},
+		{
+			"id": 15,
+			"name": "Deflector",
+			"description": "Deflect 100 opponent shots",
+			"image": "deflector_badge.svg",
+			"unlock": {
+				"statKey": "deflect_shot",
+				"statValue": 100
+			}
+		},
+		{
+			"id": 16,
+			"name": "Acrobat",
+			"description": "Perform 50 cascade bounces",
+			"unlock": {
+				"statKey": "cascade_bounce",
+				"statValue": 50
+			}
+		},
+		{
+			"id": 17,
+			"name": "Space Traveler",
+			"group": "spatial_pong",
+			"description": "Play one game of Space Pong",
+			"image": "space_badge.svg",
+			"postfix": "game(s)",
+			"parent": 18,
+			"unlock": {
+				"statKey": "spatial_pong",
+				"statValue": 1
+			}
+		},
+		{
+			"id": 18,
+			"name": "Space Invader",
+			"group": "spatial_pong",
+			"description": "Play 10 games of Space Pong",
+			"image": "space_badge2.svg",
+			"postfix": "game(s)",
+			"parent": 19,
+			"unlock": {
+				"statKey": "spatial_pong",
+				"statValue": 10
+			}
+		},
+		{
+			"id": 19,
+			"name": "Galactic traveler",
+			"group": "spatial_pong",
+			"description": "Play 100 games of Space Pong",
+			"image": "space_badge3.svg",
+			"unlock": {
+				"statKey": "spatial_pong",
+				"statValue": 100
+			}
+		},
+		{
+			"id": 20,
+			"name": "Gravity Manipulator",
+			"description": "Score a goal using the gravitational pull of the black hole",
+			"image": "gravity_manipulator_badge.svg"
+		},
+		{
+			"id": 21,
+			"name": "Wormhole Wizard",
+			"description": "Score a point using a wormhole",
+			"image": "wormhole_wizard_badge.svg"
+		},
+		{
+			"id": 22,
+			"name": "Celestial Rallies",
+			"description": "Have a rally lasting 50 hits in the black hole's gravitational field"
+		},
+		{
+			"id": 23,
+			"name": "Online Player",
+			"group": "online_play",
+			"description": "Launch an online game",
+			"image": "online_player_badge.svg",
+			"unlock": {
+				"statKey": "classic_pong",
+				"statValue": 1,
+				"OR": [{
+					"statKey": "spatial_pong",
+					"statValue": 1
+				}]
+			}
+		}
+	]
+}

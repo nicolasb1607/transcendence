@@ -1,0 +1,10 @@
+{
+	"google": {
+		"background":"#4285F4",
+		"iconSrc": "/icons/GoogleIcon.png"
+	},
+	"42 school": {
+		"background":"#000000",
+		"iconSrc": "/icons/42Icon.svg"
+	}
+}

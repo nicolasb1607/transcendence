@@ -1,0 +1,89 @@
+.container{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 25px ;
+}
+
+.title{
+	color: var(--text);
+	font-size: 28;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+.sectionHeader p  {
+	color: var(--text-detail);
+	margin: 0;
+}
+
+.sectionSearchBar{
+	display: flex;
+	justify-content: space-between;
+	align-items: center ;
+}
+
+#friendsSelector{
+	box-sizing: border-box;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 150px;
+	font-family: "Lato", sans-serif;
+	border-radius: 8px;
+}
+
+.cardComponentSection{
+	display: grid;
+	grid: auto-flow / 1fr 1fr 1fr 1fr;
+	gap: 16px;
+	width: fit-content;
+}
+
+@media screen and (min-width: 2100px){
+	.cardComponentSection{
+		grid: auto-flow / 1fr 1fr 1fr 1fr 1fr;
+	}
+}
+
+/* SEARCH BAR  */
+
+.searchBar{
+	width: 450px;
+	height: 35px;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+	background-color: var(--background-light);
+	border-radius: 25px;
+	padding: 0 10px 0 10px;
+}
+
+.searchIcon{
+	color: var(--text-detail);
+}
+
+#searchField{
+	width: 100%;
+	background: none;
+	border: none;
+	outline: none;
+	color: var(--text-detail);
+	caret-color: var(--text-detail);
+}
+
+  ::placeholder{
+	font-family:'Lato', 'Arial', 'sans-serif';;
+	font-size: 16px;
+	color: var(--text-detail);
+  }
+
+  :focus::placeholder{
+	opacity: 0;
+  }
+  
+/* ///////////////////////////////////////////////// */
+
+

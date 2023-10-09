@@ -1,0 +1,17 @@
+[
+	{
+		"rank": "rookie",
+		"color": "#696969",
+		"logo": "/icons/player_ranks/Vector_rookie.svg"
+	},
+	{
+		"rank": "cadet",
+		"color": "#10A7BC",
+		"logo": "/icons/player_ranks/Vector_cadet.svg"
+	},
+	{
+		"rank": "pilot",
+		"color": "#B51D35",
+		"logo": "/icons/player_ranks/Vector_pilot.svg"
+	}
+]

@@ -1,0 +1,256 @@
+
+#content > section:nth-child(1) {
+	background: url('~/public/Wallpaper-min-L.jpg') no-repeat top var(--background);
+	background-size: 110%;
+	height: 50vw;
+	position: relative;
+}
+
+#content > section:nth-child(1) h1 {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 40%;
+	left: 50%;
+	font-size: 5em;
+}
+
+#content > section:nth-child(1) img {
+	width: 100%;
+}
+
+#content > section:nth-child(1) img:last-child {
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	transform: rotate(180deg);
+}
+
+.splitCenterArea {
+	display: flex;
+}
+
+.splitCenterArea > * {
+	width: 50%;
+	display: flex;
+	justify-content: center;
+}
+
+#pongIllustration {
+	width: 100%;
+	height: 100%;
+}
+
+#content > section:nth-child(3) {
+	background: url('~/public/homepage_wallpaper2.jpg') no-repeat;
+	background-size: 130%;
+	background-position: 40%;
+}
+
+#lizardContent {
+	display: flex;
+	position: relative;
+	z-index: 6;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	height: 23vw;
+}
+
+#lizardContent > div {
+	position: relative;
+}
+
+#content > section:nth-child(4) {
+	height: 350px;
+}
+
+.army {
+	display: flex;
+	height: 575px;
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.armyContent {
+	background: #276BBC;
+	width: 40%;
+}
+.armyContent > div {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	max-width: unset;
+}
+.armyContent button {
+	background-color: white;
+	color: var(--primary);
+	font-weight: 600;
+}
+.armyContent button:hover {
+	background-color: color-mix(in srgb, var(--primary) 50%, white 50%);
+	color: white;
+}
+.army > div:nth-child(1) {
+	width: 60%;
+	background: url("~/public/hp_4_sm.jpg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	z-index: -1;
+}
+.army > div:nth-child(1)::after {
+	background: linear-gradient(270deg, rgba(39,107,188,1) 0%, rgba(39,107,188,0) 100%);
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#lizardsImage {
+	width: 60%;
+	height: auto;
+	position: absolute;
+	bottom: -110px;
+	max-width: 100%;
+}
+#achievement {
+	position: relative;
+}
+#achievementImage {
+	object-fit: contain;
+	z-index: 6;
+	position: relative;
+}
+#achievement::after {
+	background: url("~/public/Frame 3523.svg") no-repeat;
+    content: "";
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    top: -53%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    background-position: top;
+    z-index: 5;
+}
+.textArea {
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	align-items: center;
+	max-width: 50%;
+}
+
+.textArea img {
+	width: 10%;
+	height: auto;
+}
+
+.textArea h2 {
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+
+/* Solid border */
+.textArea hr {
+	border: 1px solid var(--border);
+	width: 60%;
+  }
+
+.textArea p {
+	text-align:center;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+.withBorder {
+	position: relative;
+	overflow: hidden;
+}
+
+section.withBorder::before, section.withBorder::after {
+	content: "";
+	background: url('~/public/separator.svg') no-repeat;
+	width: 100%;
+	position: absolute;
+	height: 100px;
+	z-index: 5;
+}
+.end::after {
+	filter: brightness(30);
+}
+.footer {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	padding-bottom: 40px;
+	gap: 8px;
+}
+.footer,.footer span {
+	background-color: white;
+	color: var(--background);
+	font-size: 18px;
+	font-weight: 600;
+}
+.footer span > span:first-child {
+	color: #e91e63;
+}
+.footer span a span {
+	color: var(--primary);
+	transition-duration: 0.3s;
+}
+.footer span a span:hover {
+	color: var(--primary-dark);
+	text-decoration: underline;
+}
+section.withBorder::after  {
+	transform: rotate(180deg);
+	bottom: 0;
+}
+#astronautsImage, #mountainsImage {
+	position: absolute;
+	bottom: 0px;
+	width: 110%!important;
+	transform: translateX(-5%);
+}
+#mountainsImage {
+	z-index: 1;
+	bottom: 30px;
+}
+#astronautsImage {
+	animation: fadeIn 1s, scaleIn 3s;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes scaleIn {
+	0% {
+		transform: translateX(-5%) scale(0.8);
+	}
+	100% {
+		transform: translateX(-5%) scale(1);
+	}
+}
+@keyframes goUp {
+	0% {
+		bottom: -100px;
+	}
+	100% {
+		bottom: 0px;
+	}
+}
+
+@media screen and (min-width:2500px) {
+	section.withBorder::before, section.withBorder::after {
+		display: none;
+	}
+}

@@ -1,0 +1,51 @@
+.achievementGroup {
+	display: flex;
+	gap: 16px;
+}
+.dialog [class~="MuiDialog-paper"] {
+	overflow: visible;
+	background-image: unset;
+	border-radius: 16px;
+}
+.dialog [class~="MuiDialog-paper"]::before {
+	content: "";
+    background: url("~/public/Frame 3523.svg");
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    transform: translate(-50%, -86%);
+}
+.dialogContent {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 300px;
+}
+#currentAchievement {
+	position: absolute;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+.progressBar {
+	width: 100%;
+	height: 8px!important;
+	border-radius: 4px;
+}
+.progressBar [class~="MuiLinearProgress-bar"] {
+	background: rgb(1,152,115);
+background: linear-gradient(90deg, rgba(1,152,115,1) 0%, rgba(59,202,116,1) 75%, rgba(103,242,184,1) 100%);
+}
+.progressText {
+	text-align: center;
+	color: var(--text-detail);
+	margin-top: 24px;
+	margin-bottom: 16px;
+}
+[data-owned="false"] {
+	filter: grayscale(1);
+}

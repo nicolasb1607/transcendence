@@ -1,0 +1,61 @@
+.row {
+	display: flex;
+	gap: 20px;
+}
+#invitePeoples {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+#gettingStarted {
+	display: flex;
+	gap: 8px;
+	flex-direction: column;
+}
+#gettingStarted [class^="MuiFormControl-root"], #gettingStarted input {
+	width: 100%;
+}
+#stepContent {
+	padding: 0 8px;
+}
+#stepContent p {
+	color: var(--text-detail);
+}
+#invitePeoples [class^="MuiInputBase-root"] button {
+	transform: unset;
+}
+[data-is-member="false"] {
+    background-color: color-mix(in srgb, var(--background) 50%, var(--border))!important;
+}
+[class~=MuiAutocomplete-paper] {
+	background-image: unset;
+	background-color: var(--background);
+	border-top: 2px solid var(--background-light);
+}
+.option {
+	display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 16px;
+	cursor: pointer;
+}
+.option:hover {
+	background: rgba(255, 255, 255, 0.05);
+	background: color-mix(in srgb, var(--primary) 5%, transparent);
+}
+#selectedUsers {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	overflow-y: auto;
+}
+[class~="MuiChip-root"] {
+	background-color: var(--background);
+}
+[class~="Mui-disabled"] [class~="MuiStepLabel-iconContainer"] svg {
+	fill: var(--background);
+}
+.errorText {
+	color: rgb(211, 47, 47);
+	font-size: 0.75rem;
+}
